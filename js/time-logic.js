@@ -1,6 +1,6 @@
-exports.Alarm = function(label, hour, minute, ampm){
+exports.Alarm = function(label, hour, minute, a){
   this.label = label;
   this.hour = hour;
   this.minute = minute;
-  this.ampm = ampm;
+  this.a = a;
 };

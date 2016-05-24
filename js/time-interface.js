@@ -27,7 +27,7 @@ $(document).ready(function(){
     console.log(newAlarm);
 
     //Show alarms to user
-    $("#user-alarms").append("<li><h4>" + newAlarm.label + "</h4><h3>" + newAlarm.hour + ":" + newAlarm.minute + " " + newAlarm.ampm + "</h3><br></li>");
+    $("#user-alarms").append("<li><h4>" + newAlarm.label + "</h4><h3>" + newAlarm.hour + ":" + newAlarm.minute + " " + newAlarm.a + "</h3><br></li>");
 
     //Clear spaces
     $("input#alarm-label").val("");
@@ -36,12 +36,16 @@ $(document).ready(function(){
     $("input.alarm-am-pm").prop("checked", false);
 
       //Alarm go whee
-      setInterval(function(){
-        if (moment().format("h:mm a") === moment().format("4:05 pm")){
-          alert("Alarm!");
-        }
-      }, 1000);
- 
+      //1. put moment and newAlarm object into comparable terms
+      var now = moment();
+      var alarm = moment({hour: newAlarm.hour, minute: newAlarm.minute, a: newAlarm.a});
+      //2. compare moment and newAlarm using if statements? for loops? moment built in stuff?
+      //3. make comparison run over and over again until moment equals newAlarm?
+
+
+
+
+
 
   });
 });
