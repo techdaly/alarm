@@ -63,7 +63,7 @@ gulp.task('build', ['clean'], function(){
 });
 
 
-gulp.task('serve', function() {
+gulp.task('serve', ['build'], function() {
   browserSync.init({
     server: {
       baseDir: "./",
